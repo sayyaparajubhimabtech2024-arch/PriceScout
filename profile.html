@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | PriceScout</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">PriceScout</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <img src="images/profile.png" alt="Profile" class="nav-profile" onclick="window.location.href='profile.html'">
+    </nav>
+  </header>
+
+  <main class="profile-container">
+    <div class="profile-card">
+      <img src="images/profile.png" alt="Profile Photo" class="profile-photo" />
+      <h2 id="userName">John Doe</h2>
+      <p id="userEmail">johndoe@example.com</p>
+
+      <div class="profile-info">
+        <label>Full Name:</label>
+        <input type="text" id="nameInput" value="John Doe" disabled>
+
+        <label>Email:</label>
+        <input type="email" id="emailInput" value="johndoe@example.com" disabled>
+
+        <label>Location:</label>
+        <input type="text" id="locationInput" value="Pune, India" disabled>
+
+        <label>Phone:</label>
+        <input type="text" id="phoneInput" value="+91 9876543210" disabled>
+      </div>
+
+      <div class="profile-buttons">
+        <button id="editBtn">Edit</button>
+        <button id="saveBtn" style="display:none;">Save</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 PriceScout | Compare Smarter, Buy Better</p>
+  </footer>
+
+  <script>
+    const editBtn = document.getElementById("editBtn");
+    const saveBtn = document.getElementById("saveBtn");
+    const inputs = document.querySelectorAll(".profile-info input");
+
+    editBtn.addEventListener("click", () => {
+      inputs.forEach(i => i.disabled = false);
+      editBtn.style.display = "none";
+      saveBtn.style.display = "inline-block";
+    });
+
+    saveBtn.addEventListener("click", () => {
+      inputs.forEach(i => i.disabled = true);
+      editBtn.style.display = "inline-block";
+      saveBtn.style.display = "none";
+      alert("Profile details saved!");
+    });
+  </script>
+</body>
+</html>
