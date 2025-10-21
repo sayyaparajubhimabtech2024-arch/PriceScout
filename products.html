@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | PriceScout</title>
+  <!-- Corrected the path to point to the new stylesheet -->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">PriceScout</div>
+    <!-- Wrapped the search box in a container div to apply the styles -->
+    <div class="search-container">
+      <input type="search" id="searchBox" placeholder="Search products...">
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="profile.html">Profile</a>
+      <a href="login.html">Login</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <aside class="filters">
+      <h3>Filter By</h3>
+
+      <label>Category:</label>
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="Mobiles">Mobiles</option>
+        <option value="Laptops">Laptops</option>
+        <option value="Headphones">Headphones</option>
+        <option value="Televisions">Televisions</option>
+        <option value="Watches">Watches</option>
+        <option value="Cameras">Cameras</option>
+        <option value="Appliances">Appliances</option>
+        <option value="Gaming">Gaming</option>
+        <option value="Speakers">Speakers</option>
+      </select>
+
+      <label>Price Limit:</label>
+      <input type="range" id="priceRange" min="1000" max="100000" step="5000" value="100000">
+      <span id="priceValue">Up to ₹100,000</span>
+
+      <label>Websites:</label>
+      <div class="site-checkboxes">
+        <label><input type="checkbox" class="siteFilter" value="Amazon" checked> Amazon</label>
+        <label><input type="checkbox" class="siteFilter" value="Flipkart" checked> Flipkart</label>
+        <label><input type="checkbox" class="siteFilter" value="Reliance Digital" checked> Reliance Digital</label>
+        <label><input type="checkbox" class="siteFilter" value="Croma" checked> Croma</label>
+      </div>
+    </aside>
+
+    <section class="products-section">
+      <div class="sort-bar">
+        <label>Sort by:</label>
+        <select id="sortSelect">
+          <option value="none">Default</option>
+          <option value="low-high">Price: Low → High</option>
+          <option value="high-low">Price: High → Low</option>
+          <option value="az">Name: A → Z</option>
+          <option value="za">Name: Z → A</option>
+        </select>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 PriceScout. All rights reserved.</p>
+  </footer>
+
+  <!-- Corrected the script path to match the file on the Canvas -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>

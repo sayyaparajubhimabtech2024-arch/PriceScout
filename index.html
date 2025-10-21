@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PriceScout | Home</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">PriceScout</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="login.html">Login</a>
+      <a href="about.html">About</a>
+      <img src="images/profile.png" alt="Profile" class="nav-profile" onclick="window.location.href='profile.html'">
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Compare Prices, Save Smart 💰</h1>
+    <p>Find the best deals across Amazon, Flipkart, Croma, and Reliance Digital — all in one place.</p>
+    <button onclick="window.location.href='products.html'">Start Comparing</button>
+  </section>
+
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card" data-category="Mobiles">Mobiles</div>
+      <div class="category-card" data-category="Laptops">Laptops</div>
+      <div class="category-card" data-category="Headphones">Headphones</div>
+      <div class="category-card" data-category="Watches">Smartwatches</div>
+      <div class="category-card" data-category="Cameras">Cameras</div>
+    </div>
+  </section>
+
+  <section class="featured">
+    <h2>Top Deals of the Day 🔥</h2>
+    <div class="belt" id="homeBelt">
+      
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 PriceScout | Compare Smarter, Buy Better</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
